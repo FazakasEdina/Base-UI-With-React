@@ -1,0 +1,172 @@
+import cors from 'cors';
+
+app.use(bodyParser.json()); <- minden Json ban
+app.use(cors({ origin: 'http:/localhost:3000'}));
+<- cross origin request, nem igyanaz a weboldal ahonnan kapunk request -et
+tehat ne utasitsa el
+-> 3000 porton futt a react
+
+JavaScript vagy TypeScript JSX 
+transzpilalas -> forraskodbol forraskod
+
+create-react-app -> npm ben elerheto -> general tobb file alapnak, mi nem hasznaljuk mert kene ismerni React-ot
+create-scripts
+
+ugyanazt hasznalja mint a serve
+npm init
+npm i react react-dom -> react alap -> react dom a weboldal struktura
+npm i --save-dev react-scripts -> buildelni
+npx react-script start
+
+public folder statikus fileok
+src folder transzpilalni valo code
+
+ npx react-scripts start <- kezdes
+
+ ------------------------------- 2. resz
+JSX -> xml + JavaScript
+nem minden egyenerteku
+- mindig egy szulo elem, ures elem <> </> react fragments
+- class -> className, camel case mindenre
+- mindig van zaro elem
+- {javascript kifejezes}
+- nem html general
+
+ReactDOM.render(componentToRender, targetNode); <- public fileba renderelni bele
+
+lehet eslint et hasznalni
+
+--------------------------------- 3. resz -- Komponensek
+hatterben monitorizalas a valtozasokkal kapcsolatban, mindig annyit tolt ujra amennyire szuksege van
+Struktura
+React kicsi komponensekre bontja a weboldalt: Nav, Main, Footer, Lista
+A React componens egy fuggveny ami elem tipust ad vissza
+
+"
+function NavBar() {
+    return (
+        <nav>
+        ...
+        </nav>
+    );
+}
+
+return (
+    <>
+        <NavBar />
+    </>
+)
+
+Attributumok
+<Quiz points={3} />
+function Quiz(props) // konvecionalisan props nak hivjuk
+props.points
+tartalmazza az attributumokat
+
+1 file 1 componens
+
+App komponens, minden mas componens egy components mappab kerul
+foelem enkapszulalas app ban
+
+export default function App() {
+
+}
+
+index berenderel egy App ot -> ReactDOM(App, root);
+
+egyik importalja masikat
+
+ha allapotot akarunk karban tartani akkor a komponenseket alternativ modon irjuk, Quizes osztaly ami egy react altal elorokolt osztaly
+export default class Quizes extends React.Component {
+
+}
+lenyeges metodusok: render () { return () }
+most hogy osztalyban vagyunk, ha lennenek props ok, akkor adattagkent ernenk el
+render parameter nelkuli
+a props nem elerheto, hanem this. lesz mint elorokles, csak azt a div-et fogja ujra rajzolni
+
+construct(props) {
+    super(props);
+    console.log(this.props);
+}
+
+
+Component osztaly, legfontosabb osztaly
+fuggvenyek felul irasa
+
+prop -ok validalasa
+
+komponensen belul helyi allapotot akarunk megtartani
+
+Props - fentrol jon, a komponenstol amit beagyaz
+State - amit karban tartunk helyben
+state -et egyszer allitjuk be a konstruktorban, ha valtoztatni kell rajta a komponens alltal adott settert kell valtoztassuk
+setState
+
+minden elembol componenst kapni
+this.state.quizes.map((quiz) => {
+    <Quiz quiz={quiz}/>
+})
+
+if length == 0 akkor irja ki nincs quizes
+
+* fetch ek a serverhez
+
+
+async hivas fetch el:
+
+async componentDidMount() {
+const response = await fetch("http://...");
+const quizes = await
+this.setState({quizes});
+}
+
+kulon resz a fetch eknek, service mappaba
+export async function findAllQuizes() {
+
+}
+
+url torzsenek nem ismetlese erdekeben valtozasokkal
+
+--------------------- 4. resz Single Page - Application, React Router
+Nem toltodik urja az oldal attol meg navigalgatok az oldalon, vagyis navbar attoltes
+navbar es footer ne renderelodjon ujra
+App nak propjaiban adjuk meg eppen melyiken vagyunk
+csak a state jeben megirjuk hol vagyunk
+igy a back es a forward gomb nem mukodnenek
+
+nem toltodik ujra, fejlecben latszodjon egy megfelelo url, szinkron ujratoltes vigyen vissza ahol voltunk
+
+react-router-dom fuggoseg
+
+nagy switch kesz, mas es mas komponenseket jelenitsen meg
+
+a router maga-> kezeli a historyjat a bongeszonek, az egesz alkalmazas enkapszulalva egy <BrowserRouter> ben
+figyeli milyen utvonalaim vannak
+switch keszeket allitunk be
+<Switch>
+    <Route exact path="/" component={Quizez} />
+    <Route path="/createQuiz" component={CreateQuizz} />
+<Switch/>
+
+<a href> helyett Link componens
+<Link to > </Link>
+import { Link } from 'react-router-dom'
+
+-- Quizz reszletei, id-k 
+<Route path="/../:quizID" component={QuizDetails} />
+atadja mint props
+
+this.props.match.params -> dinamikus objektumok megkapasa
+
+redux, state managment, hooks
+
+--------------------------------------
+div style={element}
+stilus jegyek megadasa elemekkel
+
+TypeScript
+
+osztaly.propTypes = {
+    attributum: PropTypes.tipus
+}
