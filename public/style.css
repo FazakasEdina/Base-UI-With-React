@@ -6,11 +6,13 @@
     Ash Gray: C6C6B9
 */
 
+
 body {
     margin: 0%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Navbar part*/
 .header {
     background-color: white;
     color: black;
@@ -48,4 +50,33 @@ nav a {
 
 nav a:hover {
     background-color: #C6C0B9;
+}
+
+/* Footer part */
+footer {
+    background-color: #a4a48f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer table {
+    width: 50%;
+    text-align: center;
+    font-size: 11px;
+    color: #DfDfDf;
+}
+
+.copyright {
+    align-items: center;
+    font-size: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #444;
+}
+
+.copyright p {
+    margin: 3px;
 }
