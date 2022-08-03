@@ -91,7 +91,7 @@ footer table {
 .carousel-inner {
     height: 100%;
     width: 100%;
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -143,4 +143,70 @@ footer table {
     border-radius: 4px;
     background-color: rgb(255, 255, 255, 0.6);
     color: #444;
+}
+
+/* Card part, About Us */
+.card-size {
+    width: 100%;
+    height:max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px;
+}
+
+.card-text {
+    text-align: center;
+    color: #444;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card-text a {
+    background-image: linear-gradient(to right, #CEE3A8 0%, #AAF0D1 100%);
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0.4em;
+    padding: 15px;
+    width: fit-content;
+}
+
+.card-text a:hover {
+    background-image: linear-gradient(to right, #CfEfAf 0%, #AfFfDf 100%);
+}
+
+.card-image-right {
+    width: 30vw;
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 4cm;
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow: 30px -16px #AAF0D1, -30px 16px #CEE3A8;
+}
+
+.card-image-left {
+    width: 30vw;
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 4cm;
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow: 30px 16px #A8B7E3, -30px -16px #AAF0D1;
+}
+
+/* Map part */
+.map {
+    width: 50vw;
+    height: 40vh;
+    border: solid #C6C6B9 6px;
+    border-radius: 0.4em;
 }
