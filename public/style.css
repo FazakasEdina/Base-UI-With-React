@@ -80,3 +80,67 @@ footer table {
 .copyright p {
     margin: 3px;
 }
+
+/* Carousel part */
+.carousel {
+    width: 100%;
+    background-color: white;
+    height: 80vh;
+}
+
+.carousel-inner {
+    height: 100%;
+    width: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    transition: background-image 3s ease-in-out;
+}
+
+.left-side-of-carousel {
+    width: 5%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.left-side-of-carousel:hover {
+    background-color: rgb(255, 255, 255, 0.4);
+}
+
+.center-carousel {
+    width: 90%;
+    height: 100%;
+    display: grid;
+    justify-content: end;
+    align-content: center;
+    text-align: center;
+}
+
+.right-side-of-carousel {
+    width: 5%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.right-side-of-carousel:hover {
+    background-color: rgb(255, 255, 255, 0.4);
+}
+
+.arrow-icons {
+    width: 0.6in;
+    height: 0.6in;
+}
+
+.information-box {
+    margin: 30px 30px;
+    padding: 10px 10px;
+    height: auto;
+    width: 45vh;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255, 0.6);
+    color: #444;
+}
