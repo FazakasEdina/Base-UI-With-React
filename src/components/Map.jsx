@@ -1,9 +1,8 @@
 import React from 'react'
 
-
 export default function Map() {
-    /* i didn't want to generate a google api key so I put a picture with the specitic position about the map
-    and link for the place */
+    /* I didn't want to generate a google api key so I put a picture with the specific position on the map
+    and the location link. */
     return (
         <div className='card-size'>
             <a href='https://goo.gl/maps/AwYZENfWof15WuvH9'>

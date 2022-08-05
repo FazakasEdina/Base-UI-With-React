@@ -153,7 +153,7 @@ footer table {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    padding: 40px;
+    margin: 40px 0px;
 }
 
 .card-text {
@@ -209,4 +209,28 @@ footer table {
     height: 40vh;
     border: solid #C6C6B9 6px;
     border-radius: 0.4em;
+}
+
+/* Products part */
+.product {
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    color: #444;
+}
+
+.product img {
+    width: 2in;
+    height: 3in;
+}
+
+.products-container {
+    display: grid;
+    padding: 0% 10%;
+    grid-template-columns: auto auto auto;
+}
+
+.title {
+    color: #444;
+    text-align: center;
 }
