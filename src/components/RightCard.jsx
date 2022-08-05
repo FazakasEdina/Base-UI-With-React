@@ -12,7 +12,7 @@ export default function RightCard(props) {
                 <p>
                     {description}
                 </p>
-                <a href={link}>
+                <a href={link} className='button'>
                     {linkButton}
                 </a>
             </div>

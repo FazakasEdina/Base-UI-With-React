@@ -166,7 +166,7 @@ footer table {
     justify-content: space-evenly;
 }
 
-.card-text a {
+.button {
     background-image: linear-gradient(to right, #CEE3A8 0%, #AAF0D1 100%);
     text-decoration: none;
     color: white;
@@ -177,7 +177,7 @@ footer table {
     width: fit-content;
 }
 
-.card-text a:hover {
+.button:hover {
     background-image: linear-gradient(to right, #CfEfAf 0%, #AfFfDf 100%);
 }
 
@@ -230,7 +230,27 @@ footer table {
     grid-template-columns: auto auto auto;
 }
 
+/* general */
 .title {
     color: #444;
     text-align: center;
+}
+
+form {
+    width: 40vw;
+    color: #444;
+    margin: 5px;
+}
+
+textarea, input {
+    width: 100%;
+    border-radius: 0.7em;
+    margin: 4px 0px 8px 0px;
+    min-height: 5px;
+    font-size: medium;
+    min-height: 0.3in;
+}
+
+input[type=button] {
+    border: none;
 }

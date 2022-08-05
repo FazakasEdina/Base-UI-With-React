@@ -13,7 +13,7 @@ export default function NavBar() {
     </div>
     <div className='nav-bar'>
         <nav>
-            <Link to="/">
+            <Link to="/contact">
                 Contact
             </Link>
             <Link to="/products">
