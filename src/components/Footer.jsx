@@ -11,7 +11,7 @@ export default function Footer() {
         
       <tr>
         <td> Home </td>
-        <td> Location: Rome ... </td>
+        <td> Location: ... </td>
       </tr>
 
       <tr>
